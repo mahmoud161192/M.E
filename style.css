@@ -102,7 +102,7 @@ section #content {
 
 /* Hero Section */
 #hero {
-    background-image: url(./img/first.jpg);
+    background-image: url(./first.jpg);
     background-size: cover;
     background-position: top center;
     position: relative;
@@ -336,6 +336,7 @@ section #content {
         font-size: 6rem;
     }
     #contact .contact {
+        padding: 100px 200px;
         flex-direction: column;
         padding: 100px 0;
         align-items: center;
@@ -346,6 +347,6 @@ section #content {
         width: 100%;
         display: flex;
         flex-direction: row;
-    }
+    }    
 }
 /* End media Query for tablet*/
