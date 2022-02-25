@@ -41,6 +41,7 @@ section #content {
 
 /* Header */
 #header {
+    display: block;
     position: fixed;
     z-index: 2;
     left: 0;
@@ -68,16 +69,86 @@ section #content {
     display: none;
 }
 
+.nav-list ul li a {
+    font-size: 2rem;
+}
+
+/* ====================== MEDIA at-rule ======================= */
+@media only screen and (max-width:870px) {
+    #header .hamburger {
+        display: block;
+        z-index: 4;
+        cursor: pointer;
+    }
+
+    .bar {
+        background-color: crimson;
+        width: 25px;
+        height: 4px;
+        margin: 4px;
+        transition: transform 400ms ease-out;
+    }
+
+    .nav-list {
+        position: absolute;
+        transform: translateY(-200px);
+        background-color: crimson;
+        transition: transform 400ms ease-in-out;
+        width: 100%;
+        top: 1px;
+        display: flex;
+        justify-content: space-around;
+        left: 1px;
+    }
+
+    .nav-active {
+        transform: translateY(0px);
+    }
+    
+    #header .nav-list ul li a {
+        font-size: 1.5rem;
+    }
+
+    #items { 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}
+
+.nav-active {
+    transform: translateY(0%);
+}
+
+.animate-nav .one {
+    transform: rotate(45deg) 
+    translateY(4px) 
+    translateX(8px);
+}
+
+.animate-nav .two {
+    opacity: 0;
+}
+
+.animate-nav .three {
+    transform: rotate(-45deg) 
+    translateY(-3px) 
+    translateX(8px);
+}
+
+.azure {
+    background-color: azure;
+}
+/* ============================================= */
+
 #header .nav-list ul {
     position: initial;
-    display: block;
     height: auto;
     width: fit-content;
     background-color: transparent;
 }
 
 #header .nav-list ul a {
-    font-size: 2.5rem;
     font-weight: 500;
     letter-spacing: .2rem;
     text-decoration: none;
@@ -95,9 +166,7 @@ section #content {
     display: inline-block;
 }
 
-#header .nav-list ul li a {
-    font-size: 1rem;
-}
+
 /* End Header */
 
 /* Hero Section */
