@@ -252,13 +252,14 @@ section #content {
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     margin-top: 30px;
-    transition: .3s ease;
+    transition: 0.7s ease;
     transition-property:  background-color, color;    
 }
 
 #hero .cla:hover {
     color:azure;
     background-color: crimson;
+    transform: scale(1.1);
 }
 /* End Hero Section */
 
@@ -342,8 +343,18 @@ section #content {
     font-size: 1.8rem;
     font-weight: 500;
     letter-spacing: .1rem;
+}
+
+#footer h2:nth-child(1) {
     margin-top: 10px;
+}
+#footer h2:nth-child(2) {
     margin-bottom: 10px;
+}
+
+#footer h2:hover {
+    color: crimson;
+    font-size: 2.2rem;
 }
 
 #footer .social-icon {
@@ -358,7 +369,7 @@ section #content {
 }
 
 #footer .social-item {
-    filter: grayscale(0.5);
+    filter: grayscale(1);
     transition: .3 ease filter;
 }
 
